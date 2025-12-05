@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  /* Chuẩn cho Chrome, Edge, Opera, Samsung Internet */
+  -ms-text-size-adjust: 100%;
+
+  /* Prefix cho Safari/iOS */
+  -webkit-text-size-adjust: 100%;
+
+  /* Prefix cho Firefox */
+  -moz-text-size-adjust: 100%;
+
+  /* Prefix cho IE/Legacy Edge (nếu cần) */
+  text-size-adjust: 100%;
+}
+
+
+
 /* LIGHT MODE */
 :root {
   --button-outline: rgba(0,0,0, .10);
