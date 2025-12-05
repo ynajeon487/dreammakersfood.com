@@ -1,0 +1,56 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Server (TSX + Nodemon-like)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "tsx",
+        "server/index.ts"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "outFiles": [
+        "${workspaceFolder}/server/**/*.ts"
+      ],
+      "restart": true
+    },
+    {
+      "name": "Run Client (Vite)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "cwd": "${workspaceFolder}/client",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run Server Build (dist)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server/dist/index.js",
+      "cwd": "${workspaceFolder}/server",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run Full Stack (Server + Client)",
+      "configurations": [
+        "Run Server (TSX + Nodemon-like)",
+        "Run Client (Vite)"
+      ]
+    }
+  ]
+}

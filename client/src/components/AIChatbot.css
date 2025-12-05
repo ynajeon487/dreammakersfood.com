@@ -1,0 +1,32 @@
+.chatbot-button {
+  position: fixed !important;        
+  bottom: 15px !important;           
+  right: 15px !important;            
+
+  height: 56px !important;         
+  width: 56px !important;            
+  border-radius: 50% !important;     /* rounded-full */
+  box-shadow: var(--tw-shadow-lg);
+
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent));
+  z-index: 50;
+
+  border: 1px solid black; 
+}
+
+.chatbot-button:hover {
+  background-color: hsl(var(--accent)) !important;
+}
+
+.chatbot-card {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  width: 380px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--tw-shadow-2xl);
+  z-index: 50;
+}
