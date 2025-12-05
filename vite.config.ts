@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: "/dreammakersfood.com/", // tên repo trên GitHub
+  base: "/", // tên repo trên GitHub
   plugins: [react()],
   resolve: {
     alias: {
