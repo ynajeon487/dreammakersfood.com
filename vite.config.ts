@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: "/dreammakersfood.com/", 
+  base: "/dreammakersfood.com/", // tên repo trên GitHub
   plugins: [react()],
   resolve: {
     alias: {
@@ -18,7 +18,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: path.resolve(__dirname, "dist"), // thư mục build
+    outDir: "dist", // để đơn giản, Vite sẽ tạo dist ở gốc project
     emptyOutDir: true,
   },
   server: {
