@@ -8,17 +8,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
+  base: "/dreammakersfood.com/", 
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"), // alias trực tiếp tới src
+      "@": path.resolve(__dirname, "src"),
       "@shared": path.resolve(__dirname, "shared"),
       "@assets": path.resolve(__dirname, "attached_assets"),
     },
   },
-  root: __dirname, // gốc là thư mục hiện tại
   build: {
-    outDir: path.resolve(__dirname, "dist"), // output chuẩn
+    outDir: path.resolve(__dirname, "dist"), // thư mục build
     emptyOutDir: true,
   },
   server: {
@@ -28,4 +28,3 @@ export default defineConfig({
     },
   },
 });
-
